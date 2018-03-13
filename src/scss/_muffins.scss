@@ -1,0 +1,112 @@
+.muffins {
+	display: flex;
+	flex-direction: column;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/spoons.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-bottom: 25px;
+
+	.muffins-content {
+		margin-left: 90px;
+		color: white;
+
+		h1 {
+			text-align: center;
+			font-size: 3.5em;
+			padding: 25px 10px;
+			background-color: rgba(194,163,127, 0.9);
+			font-family: $header-font;
+		}
+
+		.muffins-container {
+			display: flex;
+			flex-direction: column;
+
+			.muffins-container__title {
+				text-align: center;
+				line-height: 1.5;
+				font-size: 1.5em;
+				padding: 25px 0px;
+				font-family: $body-font;
+				font-style: italic;
+				// order: 1;
+			}
+
+			.muffins-container__container {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				// order: 3;
+
+				.single-muffin {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					font-family: $body-font;
+					font-style: italic;
+
+					.muffin-img {
+						width: 150px;
+						height: 150px;
+						border-radius: 50%;
+						background-size: cover;
+						background-position: center;
+						background-repeat: no-repeat;
+					}
+
+					.chocolate-chip {
+						background-image: url(../img/choco.png);
+					}
+
+					.birthday-cake {
+						background-image: url(../img/bday.png);
+					}
+
+					.cinnamon-sugar {
+						background-image: url(../img/cinna.png);
+					}
+
+					.toffee {
+						background-image: url(../img/toffee.png);
+					}
+
+					.blueberry {
+						background-image: url(../img/blueberry.png);
+					}
+
+					.assorted-dozen {
+						background-image: url(../img/assorted.png);
+					}
+
+					.single-muffin__title {
+						text-align: center;
+						margin: 30px 0px;
+						font-size: 3em;
+					}
+				}
+			}
+
+			.order-button {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				// order: 2;
+				padding: 25px 0px;
+				border-top: 2px solid white;
+				border-bottom: 2px solid white;
+				width: 200px;
+				margin: 35px auto;
+
+				a {
+					font-size: 1.2em;
+					text-transform: uppercase;
+					text-decoration: none;
+					color: white
+				}
+			}
+		}
+	}
+}

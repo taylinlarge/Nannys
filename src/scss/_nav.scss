@@ -1,0 +1,73 @@
+.nav-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 90px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: rgba(75,36,24, 0.9);
+	font-family: $body-font;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	color: white;
+
+	.nav-icon {
+		width: 80%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		.burg-text {
+			margin-top: 0;
+		}
+
+		p {
+			margin: 10px 0;
+		}
+
+		&:after {
+			content: '';
+			position: relative;
+			width: 80%;
+			height: 1px;
+			background-color: white;
+			margin: 5px 0px;
+		}
+
+		.svg-container {
+			width: 60%;
+			margin-top: 10px;
+
+			& > svg {
+				fill: white;
+			}
+		}
+	}
+
+	.menu-button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		.hamburger--elastic {
+			 &:focus {
+			 	outline: none;
+			 }
+		}
+	}
+
+	.logo {
+		position: absolute;
+		bottom: 30px;
+
+		& > svg {
+			fill: white;
+		}
+	}
+	
+}

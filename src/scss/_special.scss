@@ -1,0 +1,126 @@
+.specials {
+	display: flex;
+	flex-direction: column;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/roses.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding-bottom: 25px;
+
+	.specials-content {
+		margin-left: 90px;
+		color: white;
+
+		.specials__title {
+			font-size: 3.5em;
+			text-align: center;
+			font-family: $header-font;
+			padding: 25px 10px;
+			background-color: rgba(194,163,127, 0.9);
+			
+		}
+
+		.specials__des {
+			text-align: center;
+			padding: 25px 35px;
+			font-size: 1.2em;
+			line-height: 1.5;
+			font-family: $body-font;
+			font-style: italic;
+		}
+
+		.specials__module {
+			display: flex;
+			flex-direction: column;
+
+			.specials__module-item {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				font-family: $body-font;
+				font-style: italic;
+
+				h3 {
+					font-size: 3em;
+					font-family: $header-font;
+				}
+
+				.specials-item-img {
+					width: 150px;
+					height: 150px;
+					background-image: url(../img/bday.png);
+					background-size: cover;
+					background-position: center;
+					background-repeat: no-repeat;
+					margin-bottom: 35px;
+				}
+
+				.item-adder {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+					margin: 15px;
+
+					.item-adder-numbers {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						font-size: 3rem;
+
+						.selected-number {
+							padding: 0 15px;
+						}
+					}
+
+					.item-adder-text {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						margin-left: -12px;
+					}
+				}
+
+				h4 {
+					font-size: 2em;
+					margin-bottom: 15px;
+				}
+
+				.desktop-hide {
+					margin: 35px 0;
+
+					@media screen and (min-width: $desktop-bp ) {
+						display: none;
+					}
+				}
+			}
+
+			.add-to-cart-container {
+				display: flex;
+				justify-content: center;
+				
+				a {
+					font-size: 1.2em;
+					color: white;
+					text-decoration: none;
+					text-transform: uppercase;
+					width: 200px;
+					padding: 25px;
+					border-top: 2px solid white;
+					border-bottom: 2px solid white;
+					text-align: center;
+					font-family: $body-font;
+				}
+
+				.desktop-only {
+					display: none;
+
+					@media screen and (min-width: $desktop-bp) {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}

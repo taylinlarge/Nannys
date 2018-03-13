@@ -1,0 +1,60 @@
+.hero {
+	background-image: url(../img/flour-02.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding-bottom: 25px;
+
+	.hero-content {
+		margin-left: 90px;
+		color: white;
+
+		h1 {
+			padding: 25px 60px;
+			font-size: 3.5em;
+			text-align: center;
+			background-color: rgba(194,163,127, 0.9);
+			font-family: $header-font;
+		}
+
+		.hero__text {
+			text-align: center;
+			line-height: 2;
+			padding: 15px 20px;
+			font-size: 1.2em;
+			font-family: $body-font;
+			font-style: italic;
+		}
+
+		.hero__text2 {
+			font-size: 1.4em;
+			font-weight: bold;
+			font-style: italic;
+			text-align: center;
+			padding: 15px 30px;
+		}
+
+		a {
+			display: flex;
+		    justify-content: center;
+			width: 200px;
+			text-decoration: none;
+			color: white;
+			padding: 25px 0;
+			border-top: 2px solid white;
+			border-bottom: 2px solid white;
+			text-transform: uppercase;
+			margin: 25px auto;
+			text-align: center;
+			font-family: $body-font;
+
+			.desktop-only {
+				display: none;
+
+				@media screen and (min-width: $desktop-bp) {
+					display: block;
+				}
+			}
+		}
+	}
+}
