@@ -1,47 +1,140 @@
 .events {
 	display: flex;
 	flex-direction: column;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/birthday.jpeg);
-	background-size: cover;
-	background-repeat: no-repeat;
+	background-image: linear-gradient(rgba(250, 250, 250, 0.7), rgba(250, 250, 250, 0.7)), url(../img/BKG/holding-platter.png);
 	background-position: center;
-	padding-bottom: 25px;
+	margin-left: 90px;
+	overflow: hidden;
+
+	.events-header {
+		h1 {
+			text-align: center;
+			font-size: 3.5em;
+			padding: 25px 10px;
+			background-image: linear-gradient(rgba(106, 62, 34, 0.8), rgba(106, 62, 34, 0.8)), url(../img/BKG/wood-texture-web.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: left;
+			font-family: $header-font;
+			color: white;
+		}
+	}
 
 	.events-content {
-		margin-left: 90px;
-		color: white;
+		color: $brown;
 
-		.events__title {
-			font-size: 3.5em;
-			text-align: center;
-			font-family: $header-font;
-			padding: 25px 10px;
-			background-color: rgba(194,163,127, 0.9);
-			
-		}
-
-		p {
-			line-height: 2;
-			font-size: 1.1em;
-			padding: 20px 10px;
+		.events-content__title {
+			font-size: 1em;
 			text-align: center;
 			font-family: $body-font;
-			font-style: italic;
+			line-height: 1.5;
+			margin: 50px 0;
+			padding: 0 30px;
+		}
+		
+		.events__products {
+			.single-event-item {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				margin-bottom: 25px;
 
-			@media screen and (min-width: $tablet-bp) {
+				h2 {
+					text-align: center;
+					font-size: 1.5em;
+				}
+
+				.item-img {
+					width: 150%;
+					margin-top: -50px;
+
+					img {
+						width: 100%;
+					}
+				}
+
+				h3 {
+					margin-top: -50px;
+					font-size: 1.5em;
+				}
+
+				p {
+					line-height: 2;
+					font-size: 1.1em;
+					padding: 10px 0px;
+					text-align: center;
+					font-family: $body-font;
+					font-style: italic;
+
+					@media screen and (min-width: $tablet-bp) {
+						font-size: 1.2em;
+					}
+
+					@media screen and (min-width: $desktop-bp) {
+						width: 50%;
+						margin: 35px auto;
+					}
+				}
+
+				&.desktop-only {
+					display: none;
+
+					@media screen and (min-width: $desktop-bp) {
+						display: flex;
+					}
+				}
+			}
+		}
+
+		.scroll-buttons {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-top: 15px;
+
+			.previous-container, .next-container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.previous-img, .next-img {
+				width: 30%;
+
+				img {
+					width: 100%;
+				}
+			}
+
+			.previous-img {
+				transform: rotate(180deg);
+			}
+
+			p {
+				font-family: $body-font;
 				font-size: 1.2em;
-			}
-
-			@media screen and (min-width: $desktop-bp) {
-				width: 50%;
-				margin: 35px auto;
-			}
-
-			a {
-				color: white;
 				font-style: italic;
-				font-size: 1.3em;
+				padding-top: 15px;
 			}
+		}
+
+		a {
+			position: relative;
+			display: flex;
+		    justify-content: center;
+			width: 200px;
+			outline: 3px solid rgba(106,62,34,0.9);
+			background-color: rgba(106,62,34,0.9);
+			border: 3px solid white;
+			text-decoration: none;
+			font-family: $body-font;
+			color: white;
+			padding: 20px 0;
+		    margin: 50px auto;
+			text-transform: uppercase;
+			text-align: center;
+			z-index: 5;
 		}
 	}
 }
