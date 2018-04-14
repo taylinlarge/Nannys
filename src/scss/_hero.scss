@@ -7,10 +7,23 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
+		padding: 25px 0;
+
+		@media screen and (min-width: $desktop-bp) {
+			padding: 50px 0;
+		}
 
 		.hero-logo {
 			width: 80%;
 		    margin: 0 auto;
+
+		    @media screen and (min-width: $tablet-bp) {
+		    	width: 70%;
+		    }
+
+		    @media screen and (min-width: $desktop-bp) {
+		    	width: 30%;
+		    }
 
 		    img {
 		    	width: 100%;
@@ -23,6 +36,10 @@
 			text-align: center;
 			font-family: $header-font;
 			color: white;
+
+			@media screen and (min-width: $tablet-bp) {
+		    	font-size: 2em;
+		    }
 		}
 	}
 
@@ -42,14 +59,13 @@
 			}
 
 			&.mobile {
-				display: block;
 			    position: relative;
-				top: -25px;
+				top: -35px;
 				left: -35px;
 				width: 120%;
 
 				@media screen and (min-width: $tablet-bp) {
-					diplay: none;
+					display: none;
 				}
 
 				@media screen and (min-width: $desktop-bp) {
@@ -59,6 +75,11 @@
 
 			&.tablet {
 				display: none;
+				 position: relative;
+				top: -40px;
+				left: -35px;
+				width: 120%;
+				z-index: 2;
 
 				@media screen and (min-width: $tablet-bp) {
 					display: block;
@@ -71,6 +92,11 @@
 
 			&.desktop {
 				display: none;
+				width: 110%;
+				position: relative;
+				left: -50px;
+				top: -60px;
+				z-index: 2;
 
 				@media screen and (min-width: $tablet-bp) {
 					display: none;
@@ -94,6 +120,7 @@
 
 			@media screen and (min-width: $tablet-bp) {
 				font-size: 1.2em;
+				padding: 15px 50px;
 			}
 
 			@media screen and (min-width: $desktop-bp) {
@@ -112,6 +139,10 @@
 			margin-bottom: 70px;
 			position: relative;
 			z-index: 5;
+
+			@media screen and (min-width: $tablet-bp) {
+		    	margin: 25px 0;
+		    }
 		}
 
 		a {
@@ -151,8 +182,19 @@
 
 		.chip-img {
 			width: 30%;
-			top: 51%;
+			top: 31%;
 			right: -10%;
+			max-width: 200px;
+			z-index: 1;
+
+			@media screen and (min-width: $tablet-bp) {
+				top: 14%;
+			}
+
+			@media screen and (min-width: $desktop-bp) {
+				right: -3%;
+				top: 25%;
+			}
 		}
 
 		.muffins-img {
@@ -160,20 +202,46 @@
 			bottom: 12%;
 			right: -13%;
 			transform: rotate(-90deg);
+			max-width: 250px;
+
+			@media screen and (min-width: $tablet-bp) {
+				bottom: 18%;
+			}
+
+			@media screen and (min-width: $desktop-bp) {
+				bottom: 25%;
+				right: -70px;
+			}
 		}
 
 		.tray-img {
-			bottom: -15%;
+			top: 97%;
 			transform: rotate(90deg);
-			right: -35%;
+			right: -110px;
 			width: 140%;
+			max-width: 400px;
+
+			@media screen and (min-width: $desktop-bp) {
+				top: 85%;
+				right: -100px;
+			}
 		}
 
 		.spatula-img {
 			width: 65%;
-			bottom: -8%;
+			bottom: -100px;
 			transform: rotate(90deg);
 			left: -80px;
+			max-width: 300px;
+
+			@media screen and (min-width: $tablet-bp) {
+				bottom: -190px;
+
+			}
+
+			@media screen and (min-width: $desktop-bp) {
+				bottom: -150px;
+			}
 		}
 	}
 }
