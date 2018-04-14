@@ -1,7 +1,7 @@
 {
-  "name": "circus-starter",
+  "name": "Nanny's Mini Muffins",
   "version": "1.2.3",
-  "description": "A good starting point for new Circus students",
+  "description": "Wordpress site for Nanny's",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
@@ -22,13 +22,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chrissilich/circus-starter.git"
+    "url": "git+https://github.com/taylinlarge/Nannys.git"
   },
-  "author": "Chris Silich",
-  "license": "MIT",
+  "author": "Taylin Large",
+  "license": "",
   "bugs": {
-    "url": "https://github.com/chrissilich/circus-starter/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/chrissilich/circus-starter#readme",
+  "homepage": "https://github.com/taylinlarge",
   "babel": {}
 }
