@@ -1,15 +1,20 @@
 .muffins {
 	display: flex;
 	flex-direction: column;
-	background-image: linear-gradient(rgba(250, 250, 250, 0.7), rgba(250, 250, 250, 0.7)), url(../img/BKG/wooden-TEX-02-SMALL.jpg);
+	background-image: linear-gradient(rgba(250, 250, 250, 0.7), rgba(250, 250, 250, 0.7)), url(../img/BKG/wood-bkg-02.png);
 	background-position: center;
-	margin-left: 90px;
+	background-size: contain;
+	margin-left: 120px;
 	overflow: hidden;
+
+	@media screen and (min-width: $desktop-bp) {
+		background-size: cover;
+	}
 
 	.muffins-header {
 		h1 {
 			text-align: center;
-			font-size: 3.5em;
+			font-size: 4.5em;
 			padding: 25px 10px;
 			background-image: linear-gradient(rgba(106, 62, 34, 0.8), rgba(106, 62, 34, 0.8)), url(../img/BKG/wood-texture-web.png);
 			background-size: cover;
@@ -102,6 +107,21 @@
 				padding: 0 100px;
 			}
 
+			&.first-row {
+				justify-content: center;
+
+				:first-child {
+
+					@media screen and (min-width: 635px) {
+						margin-right: 10%;
+					}
+
+					@media screen and (min-width: $desktop-bp) {
+						margin-right: 20%;
+					}
+				}
+			}
+
 			.single-muffin {
 				display: flex;
 				flex-direction: column;
@@ -156,23 +176,31 @@
 			}
 		}
 
-		a {
+		.button-container {
 			position: relative;
-			display: flex;
-		    justify-content: center;
-		    width: 90%;
-			max-width: 200px;
-			outline: 3px solid rgba(106,62,34,0.9);
-			background-color: rgba(106,62,34,0.9);
-			border: 3px solid white;
-			text-decoration: none;
-			font-family: $body-font;
-			color: white;
-			padding: 20px 0;
-		    margin: 0 auto;
-			text-transform: uppercase;
-			text-align: center;
+			width: 90%;
+			max-width: 250px;
+			border: 3px solid rgba(106,62,34,0.9);
+			margin: 70px auto;
+			padding: 5px;
 			z-index: 5;
+
+			a {
+				position: relative;
+				display: flex;
+			    justify-content: center;
+			    width: 100%;
+				background-color: rgba(106,62,34,0.9);
+				text-decoration: none;
+				font-family: $body-font;
+				color: white;
+				padding: 20px;
+				padding-top: 28px;
+				text-transform: uppercase;
+				text-align: center;
+				letter-spacing: .75px;
+				z-index: 5;
+			}
 		}
 	}
 
@@ -267,7 +295,7 @@
 
 		.scroll-buttons {
 			display: flex;
-			justify-content: space-around;
+			justify-content: center;
 			align-items: center;
 			margin-top: 15px;
 
@@ -279,6 +307,10 @@
 				display: flex;
 				flex-direction: column;
 				align-items: center;
+			}
+
+			.previous-container {
+				margin-right: 40px;
 			}
 
 			.previous-img, .next-img {
@@ -302,22 +334,28 @@
 		}
 
 	}
-	a {
+	.button-container {
 		position: relative;
-		display: flex;
-	    justify-content: center;
-	    width: 90%;
-		max-width: 200px;
-		outline: 3px solid rgba(106,62,34,0.9);
-		background-color: rgba(106,62,34,0.9);
-		border: 3px solid white;
-		text-decoration: none;
-		font-family: $body-font;
-		color: white;
-		padding: 20px 0;
-	    margin: 50px auto 100px;
-		text-transform: uppercase;
-		text-align: center;
+		width: 90%;
+		max-width: 350px;
+		border: 3px solid rgba(106,62,34,0.9);
+		margin: 70px auto;
+		padding: 5px;
 		z-index: 5;
+
+		a {
+			position: relative;
+			display: flex;
+		    justify-content: center;
+		    width: 100%;
+			background-color: rgba(106,62,34,0.9);
+			text-decoration: none;
+			font-family: $body-font;
+			color: white;
+			padding: 20px;
+			text-transform: uppercase;
+			text-align: center;
+			z-index: 5;
+		}
 	}
 }

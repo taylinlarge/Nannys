@@ -1,5 +1,5 @@
 .hero {
-	margin-left: 90px;
+	margin-left: 120px;
 	overflow: hidden;
 
 	.hero-header {
@@ -45,7 +45,7 @@
 
 	.hero-content {
 		color: $brown;
-		background-image: linear-gradient(rgba(250, 250, 250, 0.7), rgba(250, 250, 250, 0.7)), url(../img/BKG/wooden-TEX-02-SMALL.jpg);
+		background-image: linear-gradient(rgba(250, 250, 250, 0.7), rgba(250, 250, 250, 0.7)), url(../img/BKG/wood-bkg-02.png);
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
@@ -145,31 +145,42 @@
 		    }
 		}
 
-		a {
-			display: flex;
-		    justify-content: center;
-			width: 200px;
-			text-decoration: none;
-			background-color: rgba(106,62,34,0.9);
-			color: white;
-			padding: 20px 0;
-			border: 3px solid white;
-			outline: 3px solid rgba(106,62,34,0.9);
-			text-transform: uppercase;
-		    margin: 70px auto;
-			text-align: center;
-			font-family: $body-font;
+		.button-container {
 			position: relative;
+			width: 90%;
+			max-width: 250px;
+			border: 3px solid rgba(106,62,34,0.9);
+			margin: 70px auto;
+			padding: 5px;
 			z-index: 5;
 
-			.desktop-only {
-				display: none;
+			a {
+				display: flex;
+			    justify-content: center;
+				width: 100%;
+				text-decoration: none;
+				background-color: rgba(106,62,34,0.9);
+				color: white;
+				padding: 20px 0;
+				padding-top: 28px;
+				text-transform: uppercase;
+				text-align: center;
+				font-family: $body-font;
+				position: relative;
+				letter-spacing: .75px;
+				z-index: 5;
 
-				@media screen and (min-width: $desktop-bp) {
-					display: block;
+				.desktop-only {
+					display: none;
+
+					@media screen and (min-width: $desktop-bp) {
+						display: block;
+					}
 				}
-			}
+			}	
 		}
+
+		
 
 		.chip-img, .muffins-img, .tray-img, .spatula-img {
 			position: absolute;
