@@ -158,7 +158,7 @@
 
 			.specials-hero-text {
 				@media screen and (min-width: $desktop-bp) {
-					order: 2;
+					order: 1;
 					padding-left: 0;
 					text-align: left;
 				}
@@ -168,7 +168,7 @@
 
 				@media screen and (min-width: $desktop-bp) {
 					display: flex;
-					order: 3;
+					order: 2;
 				}
 
 				.specials-text__title {
@@ -220,37 +220,52 @@
 				}
 			}
 
-			.button-container {
-				position: relative;
-				width: 90%;
-				max-width: 250px;
-				border: 3px solid rgba(106,62,34,0.9);
-				margin: 70px auto;
-				padding: 5px;
-				z-index: 5;
-
-				a {
-					position: relative;
-					display: flex;
-				    justify-content: center;
-				    width: 100%;
-					background-color: rgba(106,62,34,0.9);
-					text-decoration: none;
-					font-family: $body-font;
-					color: white;
-					padding: 20px;
-					padding-top: 28px;
-					text-transform: uppercase;
-					text-align: center;
-					letter-spacing: .75px;
-					z-index: 5;
-				}
+			.button-row {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
 
 				@media screen and (min-width: $desktop-bp) {
-					order: 1;
-					display: flex;
-					align-self: flex-start;
-					margin: 50px 0 0 0;
+					flex-direction: row;
+					justify-content: space-between;
+					order: 3;
+				}
+
+				.button-container {
+					position: relative;
+					width: 90%;
+					max-width: 250px;
+					border: 3px solid rgba(106,62,34,0.9);
+					padding: 5px;
+					z-index: 5;
+					margin-bottom: 20px;
+
+					a {
+						position: relative;
+						display: flex;
+					    justify-content: center;
+					    width: 100%;
+						background-color: rgba(106,62,34,0.9);
+						text-decoration: none;
+						font-family: $body-font;
+						color: white;
+						padding: 20px;
+						padding-top: 28px;
+						text-transform: uppercase;
+						text-align: center;
+						letter-spacing: .75px;
+						z-index: 5;
+
+						@media screen and (min-width: $tablet-bp) {
+							font-size: 0.8em;
+						}
+					}
+
+					@media screen and (min-width: $desktop-bp) {
+						display: flex;
+						align-self: flex-start;
+						width: 47%;
+					}
 				}
 			}
 
@@ -279,6 +294,14 @@
 					text-align: left;
 				}
 			}
+		}
+	}
+
+	&.products-page__specials {
+		display: none;
+
+		&.active {
+			display: flex;
 		}
 	}
 }

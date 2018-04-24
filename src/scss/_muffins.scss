@@ -334,6 +334,7 @@
 		}
 
 	}
+
 	.button-container {
 		position: relative;
 		width: 90%;
@@ -367,6 +368,7 @@
 
 		@media screen and (min-width: $desktop-bp) {
 			flex-direction: row;
+			flex-wrap: wrap;
 		}
 
 		.muffins-module {
@@ -377,9 +379,10 @@
 			padding: 30px;
 			width: 100%;
 			border-bottom: 2px solid $tan;
+			z-index: 5;
 
 			@media screen and (min-width: $desktop-bp) {
-				width: 33%;
+				width: 33.33%;
 				border-right: 2px solid $tan;
 				border-bottom: none;
 			}
@@ -429,6 +432,7 @@
 				flex-direction: column;
 			    height: 50px;
 			    overflow: hidden;
+			    cursor: pointer;
 
 
 			    &.up-active {
@@ -478,10 +482,223 @@
 		}
 
 		.muffins-expanded {
-			.single-muffin {
-				.single-muffin-img {
-					img {
-						width: 100%;
+			padding: 30px;
+			display: none;
+			flex-direction: column;
+			border-bottom: 2px solid $tan;
+
+			&.active {
+				display: flex;
+			}
+
+			@media screen and (min-width: $desktop-bp) {
+				order: 4;
+				border-bottom: none;
+				border-top: 2px solid $tan;
+			}
+
+			.muffins-expanded__title {
+				font-size: 2em;
+				text-align: center;
+				padding: 30px 0;
+				font-weight: 600;
+			}
+
+			.muffins-expanded__muffins-container {
+				display: flex;
+				flex-direction: column;
+
+				@media screen and (min-width: $tablet-bp) {
+					flex-direction: row;
+					flex-wrap: wrap;
+					justify-content: space-between;
+				}
+
+				.single-muffin {
+					width: 100%;
+					text-align: center;
+					margin-bottom: 30px;
+
+					@media screen and (min-width: $tablet-bp) {
+						width: 40%;
+					}
+
+					@media screen and (min-width: $desktop-bp) {
+						width: 25%;
+					}
+
+					.single-muffin-img {
+
+						@media screen and (min-width: $desktop-bp) {
+							width: 60%;
+							margin: 0 auto;
+						}
+						img {
+							width: 100%;
+						}
+					}
+
+					.single-muffin-title {
+						p {
+							margin-bottom: 10px;
+						}
+					}
+
+					h3 {
+						font-size: 1.75em;
+					    margin: 15px 0;
+					}
+				}
+
+				.dozen-container {
+					text-align: center;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					align-items: center;
+					margin: 20px auto 50px;
+
+					@media screen and (min-width: $tablet-bp) {
+						flex-direction: row;	
+					}
+
+					.dozen-container__text {
+						
+						@media screen and (min-width: $tablet-bp) {
+							width: 45%;
+						}
+
+						h3 {
+							font-size: 1.75em;
+							margin-bottom: 15px;
+						}
+
+						p {
+							letter-spacing: .75px;
+							line-height: 1.2;
+						}
+					}
+
+
+					.button-container {
+						position: relative;
+						width: 90%;
+						max-width: 350px;
+						border: 3px solid rgba(106,62,34,0.9);
+						margin: 30px auto 0;
+						padding: 5px;
+						z-index: 5;
+
+						@media screen and (min-width: $tablet-bp) {
+							width: 45%;
+							font-size: 0.8em;
+							align-self: center;
+							margin: 0;
+						}
+
+						p {
+							width: 100%;
+							text-decoration: none;
+							background-color: rgba(106,62,34,0.9);
+							color: white;
+							padding: 20px 0;
+							padding-top: 28px;
+							text-transform: uppercase;
+							text-align: center;
+							font-family: $body-font;
+							letter-spacing: .75px;
+							z-index: 5;
+						}
+					}
+				}
+
+				.platters-expanded__title {
+					width: 100%;
+					font-size: 2em;
+					text-align: center;
+					margin-bottom: 50px;
+				}
+
+				.muffins-expanded__platters-container {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					width: 100%;
+
+					@media screen and (min-width: $tablet-bp) {
+						flex-direction: row;
+					}					
+
+					.single-event-item {
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+						margin-bottom: 25px;
+
+						@media screen and (min-width: $tablet-bp) {
+							width: 50%;
+						}
+
+						@media screen and (min-width: $desktop-bp) {
+							width: 33%;
+						}
+
+						h2 {
+							text-align: center;
+							font-size: 1.5em;
+							padding-bottom: 15px;
+						}
+
+						.item-img {
+							width: 150%;
+							max-width: 450px;
+							margin-top: -50px;
+
+							img {
+								width: 100%;
+							}
+
+							@media screen and (min-width: $tablet-bp) {
+								width: 120%;
+							}
+						}
+
+						h3 {
+							margin-top: -25px;
+							font-size: 1.5em;
+
+							@media screen and (min-width: $tablet-bp) {
+								margin-top: -20px;
+							}
+						}
+
+						p {
+							line-height: 2;
+							font-size: 1.1em;
+							padding: 10px 0px;
+							text-align: center;
+							font-family: $body-font;
+							font-style: italic;
+
+							@media screen and (min-width: $tablet-bp) {
+								font-size: 1.2em;
+							}
+
+							@media screen and (min-width: $desktop-bp) {
+								width: 50%;
+								margin: 5px auto;
+							}
+						}
+
+						&.desktop-only {
+							display: none;
+
+							@media screen and (min-width: $desktop-bp) {
+								display: flex;
+							}
+						}
 					}
 				}
 			}
@@ -495,9 +712,10 @@
 			padding: 30px;
 			width: 100%;
 			border-bottom: 2px solid $tan;
+			z-index: 5;
 
 			@media screen and (min-width: $desktop-bp) {
-				width: 33%;
+				width: 33.33%;
 				border-right: 2px solid $tan;
 				border-bottom: none;
 			}
@@ -547,6 +765,7 @@
 				flex-direction: column;
 			    height: 50px;
 			    overflow: hidden;
+			    cursor: pointer;
 
 
 			    &.up-active {
@@ -606,9 +825,10 @@
 			align-items: center;
 			padding: 30px;
 			width: 100%;
+			z-index: 5;
 
 			@media screen and (min-width: $desktop-bp) {
-				width: 33%;
+				width: 33.33%;
 			}
 			
 
@@ -657,6 +877,7 @@
 				flex-direction: column;
 			    height: 50px;
 			    overflow: hidden;
+			    cursor: pointer;
 
 
 			    &.up-active {

@@ -47,7 +47,7 @@
 			margin: 5px 0px;
 		}
 
-		&:nth-child(5), &:nth-child(6) {
+		&:nth-child(6), &:nth-child(7) {
 			&:after {
 				width: 0;
 				height: 0;
@@ -56,13 +56,13 @@
 
 
 		.svg-container {
-			width: 80%;
+			width: 65%;
 			margin-top: 5px;
 		}
 
-		&.cart-button, &.scrapbook-button {
-			width: 70%;
-		}
+		// &.cart-button, &.scrapbook-button {
+		// 	width: 70%;
+		// }
 	}
 
 	.menu-button {
