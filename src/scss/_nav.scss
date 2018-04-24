@@ -56,8 +56,12 @@
 
 
 		.svg-container {
-			width: 65%;
+			width: 55%;
 			margin-top: 5px;
+
+			@media screen and (min-width: $tablet-bp) {
+				width: 65%;
+			}
 		}
 
 		// &.cart-button, &.scrapbook-button {

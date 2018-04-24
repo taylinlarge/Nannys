@@ -14,7 +14,7 @@
 	.muffins-header {
 		h1 {
 			text-align: center;
-			font-size: 4.5em;
+			font-size: 3.5em;
 			padding: 25px 10px;
 			background-image: linear-gradient(rgba(106, 62, 34, 0.8), rgba(106, 62, 34, 0.8)), url(../img/BKG/wood-texture-web.png);
 			background-size: cover;
@@ -22,6 +22,10 @@
 			background-position: left;
 			font-family: $header-font;
 			color: white;
+
+			@media screen and (min-width: $tablet-bp) {
+				font-size: 4.5em;
+			}
 
 			@media screen and (min-width: $desktop-bp) {
 				padding: 75px 10px;
@@ -54,6 +58,7 @@
 
 				@media screen and (min-width: $desktop-bp) {
 					padding: 0;
+					font-size: 3em;
 				}
 			}
 
@@ -105,21 +110,6 @@
 
 			@media screen and (min-width: $desktop-bp) {
 				padding: 0 100px;
-			}
-
-			&.first-row {
-				justify-content: center;
-
-				:first-child {
-
-					@media screen and (min-width: 635px) {
-						margin-right: 10%;
-					}
-
-					@media screen and (min-width: $desktop-bp) {
-						margin-right: 20%;
-					}
-				}
 			}
 
 			.single-muffin {
@@ -205,32 +195,211 @@
 	}
 
 	.products-content {
-		// padding: 0 30px;
 		color: $brown;
 
 		@media screen and (min-width: $desktop-bp) {
 			display: flex;
+			flex-direction: column;
 
 		}
 
-		.first-product, .second-product {
+		.first-product {
 
 			@media screen and (min-width: $desktop-bp) {
-				width: 50%;
+				width: 100%;
+			}
+
+			h1 {
+				font-size: 2em;
+				text-align: center;
+				margin-bottom: 30px;
+				padding: 30px;
+
+				@media screen and (min-width: $desktop-bp) {
+					font-size: 3em;
+					margin-bottom: 0;
+				}
 			}
 
 			h2 {
-				margin-top: 40px;
-				padding: 15px 30px;
-				font-family: $body-font;
-				font-size: 2.5em;
-				line-height: 1.5;
 				text-align: center;
+				font-size: 1.5em;
+				padding-bottom: 15px;
 			}
 
-			.second-product__items {
+			.platter-img {
+				width: 130%;
+				max-width: 450px;
+				margin-top: -50px;
+
+				img {
+					width: 100%;
+				}
+
+				@media screen and (min-width: $tablet-bp) {
+					width: 120%;
+				}
+			}
+
+			h3 {
+				margin-top: -50px;
+				font-size: 1.2em;
+
+				@media screen and (min-width: $tablet-bp) {
+					margin-top: -20px;
+				}
+			}
+
+			p {
+				line-height: 2;
+				font-size: 1.1em;
+				padding: 10px 0px;
+				text-align: center;
+				font-family: $body-font;
+				font-style: italic;
+
+				@media screen and (min-width: $tablet-bp) {
+					font-size: 1.2em;
+				}
+
 				@media screen and (min-width: $desktop-bp) {
-					margin-top: -1%;
+					width: 50%;
+					margin: 5px auto;
+				}
+			}
+
+			&.desktop-only {
+				display: none;
+
+				@media screen and (min-width: $desktop-bp) {
+					display: flex;
+				}
+			}
+		}
+
+		.second-product {
+
+			@media screen and (min-width: $desktop-bp) {
+				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			h1 {
+				width: 100%;
+				font-size: 2em;
+				text-align: center;
+				margin-bottom: 60px;
+
+				@media screen and (min-width: $desktop-bp) {
+					margin-bottom: 10px;
+					font-size: 3em;
+				}
+			}
+
+			h2 {
+				display: none;
+				width: 100%;
+				font-size: 1.3em;
+				text-align: center;
+				margin-bottom: 60px;
+				font-style: italic;
+
+				@media screen and (min-width: $desktop-bp) {
+					display: block;
+				}
+			}
+
+			.second-product__container {
+
+				@media screen and (min-width: $desktop-bp) {
+					width: 60%;
+				}
+				.second-product__items {
+					@media screen and (min-width: $desktop-bp) {
+						margin-top: -1%;
+					}
+				}
+			}
+			.mix-container {
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+				margin: 20px auto 50px;
+				padding: 0 30px;
+
+				@media screen and (min-width: $tablet-bp) {
+					flex-direction: row;
+				}
+
+				@media screen and (min-width: $desktop-bp) {
+					width: 40%;
+					padding: 0 30px 0 0;
+					text-align: left;
+					justify-content: flex-start;
+					flex-direction: column;
+				}
+
+				.mix-container__text {
+					
+					@media screen and (min-width: $tablet-bp) {
+						width: 45%;
+					}
+
+					@media screen and (min-width: $desktop-bp) {
+						width: 100%;
+						margin-bottom: 60px;
+					}
+
+					h3 {
+						font-size: 1.75em;
+						margin-bottom: 15px;
+					}
+
+					p {
+						letter-spacing: .75px;
+						line-height: 1.2;
+					}
+				}
+
+
+				.button-container {
+					position: relative;
+					width: 90%;
+					max-width: 350px;
+					border: 3px solid rgba(106,62,34,0.9);
+					margin: 30px auto 0;
+					padding: 5px;
+					z-index: 5;
+					font-size: 0.8em;
+
+					@media screen and (min-width: $tablet-bp) {
+						width: 45%;
+						align-self: center;
+						font-size: 1em;
+						margin: 0;
+					}
+
+					@media screen and (min-width: $desktop-bp) {
+						width: 90%;
+						align-self: flex-start;
+					}
+
+					p {
+						width: 100%;
+						text-decoration: none;
+						background-color: rgba(106,62,34,0.9);
+						color: white;
+						padding: 20px 0;
+						padding-top: 28px;
+						text-transform: uppercase;
+						text-align: center;
+						font-family: $body-font;
+						letter-spacing: .75px;
+						z-index: 5;
+					}
 				}
 			}
 		}
@@ -245,6 +414,7 @@
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
+				margin-bottom: 30px;
 
 				@media screen and (min-width: $tablet-bp) {
 					width: 50%;
@@ -257,12 +427,6 @@
 					img {
 						width: 100%;
 					}
-					
-					@media screen and (min-width: $tablet-bp) {
-						&.mug-img {
-							margin-bottom: 3%;
-						}
-					}
 				}
 
 				h4 {
@@ -271,12 +435,6 @@
 					line-height: 1.2;
 					text-align: center;
 					padding: 15px 0;
-
-					@media screen and (min-width: $tablet-bp) {
-						&.mug-title {
-							margin-bottom: -25%;
-						}
-					}
 				}
 
 				&.mobile-hidden {
@@ -550,68 +708,6 @@
 					}
 				}
 
-				.dozen-container {
-					text-align: center;
-					display: flex;
-					flex-direction: column;
-					justify-content: space-between;
-					align-items: center;
-					margin: 20px auto 50px;
-
-					@media screen and (min-width: $tablet-bp) {
-						flex-direction: row;	
-					}
-
-					.dozen-container__text {
-						
-						@media screen and (min-width: $tablet-bp) {
-							width: 45%;
-						}
-
-						h3 {
-							font-size: 1.75em;
-							margin-bottom: 15px;
-						}
-
-						p {
-							letter-spacing: .75px;
-							line-height: 1.2;
-						}
-					}
-
-
-					.button-container {
-						position: relative;
-						width: 90%;
-						max-width: 350px;
-						border: 3px solid rgba(106,62,34,0.9);
-						margin: 30px auto 0;
-						padding: 5px;
-						z-index: 5;
-
-						@media screen and (min-width: $tablet-bp) {
-							width: 45%;
-							font-size: 0.8em;
-							align-self: center;
-							margin: 0;
-						}
-
-						p {
-							width: 100%;
-							text-decoration: none;
-							background-color: rgba(106,62,34,0.9);
-							color: white;
-							padding: 20px 0;
-							padding-top: 28px;
-							text-transform: uppercase;
-							text-align: center;
-							font-family: $body-font;
-							letter-spacing: .75px;
-							z-index: 5;
-						}
-					}
-				}
-
 				.platters-expanded__title {
 					width: 100%;
 					font-size: 2em;
@@ -843,6 +939,7 @@
 
 				@media screen and (min-width: $desktop-bp) {
 					flex-direction: column;
+					margin-top: 13%;
 				}
 				
 				.merch-img {
@@ -923,6 +1020,70 @@
 					font-size: 1.1em;
 					text-align: center;
 				}
+			}
+		}
+	}
+
+	.dozen-container {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		margin: 20px auto 50px;
+		padding: 0 30px;
+
+		@media screen and (min-width: $tablet-bp) {
+			flex-direction: row;	
+		}
+
+		.dozen-container__text {
+			
+			@media screen and (min-width: $tablet-bp) {
+				width: 45%;
+			}
+
+			h3 {
+				font-size: 1.75em;
+				margin-bottom: 15px;
+			}
+
+			p {
+				letter-spacing: .75px;
+				line-height: 1.2;
+			}
+		}
+
+
+		.button-container {
+			position: relative;
+			width: 90%;
+			max-width: 350px;
+			border: 3px solid rgba(106,62,34,0.9);
+			margin: 30px auto 0;
+			padding: 5px;
+			font-size: 0.8em;
+			z-index: 5;
+
+			@media screen and (min-width: $tablet-bp) {
+				width: 45%;
+				font-size: 1em;
+				align-self: center;
+				margin: 0;
+			}
+
+			p {
+				width: 100%;
+				text-decoration: none;
+				background-color: rgba(106,62,34,0.9);
+				color: white;
+				padding: 20px 0;
+				padding-top: 28px;
+				text-transform: uppercase;
+				text-align: center;
+				font-family: $body-font;
+				letter-spacing: .75px;
+				z-index: 5;
 			}
 		}
 	}
